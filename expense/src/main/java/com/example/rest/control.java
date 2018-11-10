@@ -51,41 +51,9 @@ public class control {
 		}
 		
 		
-//		ExecutorService executor = Executors.newFixedThreadPool(10);
-//		for(int i=0;i<2;i++)
-//		{
-//		Employee e1=(Employee) appcontext.getBean("emp", "nadim",i);
-//	
-//		
-//		
-//		
-//		executor.execute(e1);
-//		
-//		
-//		}
-//		executor.shutdown();
-//        while (!executor.isTerminated()) {
-//        }
-//        System.out.println("Finished all threads");
+
 		
 	}
-	//@RequestMapping(value="/example1",headers = { "key1=val1", "key2=val2" })
-	@PostMapping("/ex/foos")
-	public  ResponseEntity<User> example1( @RequestHeader(value="Accept-Language" ,required=false) String encoding)
-	{
-		User u=new User("nadim","1");
-		System.out.println(encoding);
-		HttpHeaders responseHeaders = new HttpHeaders();
-	    responseHeaders.set("Baeldung-Example-Header", 
-	      "Value-ResponseEntityBuilderWithHttpHeaders");
-	    responseHeaders.set("name","ARIF");
-	    
-	 
-	    ResponseEntity <User>e= ResponseEntity.ok()
-	      .headers(responseHeaders)
-	      .body(u);
-	    return e;
-		
-	}
+
 	}
 
